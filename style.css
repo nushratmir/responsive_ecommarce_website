@@ -26,6 +26,33 @@ html{
     scroll-padding-top: 9rem;
     overflow-x:hidden;
 }
+section{
+    padding: 2rem 9%;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.btn::before{
+content: '';
+position: absolute;
+top: 0;
+right: 0;
+height: 100%;
+width: 0%;
+background: var(--black);
+z-index: -1;
+transition: .2s ease-out;}
 
 .header{
     position: fixed;
@@ -68,6 +95,39 @@ html{
     color: #ffffff;
     background: var(--main-color);
 }
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    padding-top:10rem;
+    position: relative;
+    background: var(--bg);
+}
+.home.content{
+    flex: 1 1 45rem;
+}
+.home .image{
+    flex: 1 1 45rem;
+}
+.home .image img{
+    width: 100%;
+}
+.home .content h3{
+    font-size: 3.5rem;
+    color: var(--black);
+    line-height: 1.8;
+}
+.home .content p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+
+
+
 
 /*media queries*/
 
@@ -76,6 +136,9 @@ html{
         font-size: 55%;
     }
     .header{
+        padding: 2rem;
+    }
+    section{
         padding: 2rem;
     }
 }
